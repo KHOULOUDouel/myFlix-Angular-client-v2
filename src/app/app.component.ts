@@ -1,23 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { FetchApiDataService } from './fetch-api-data.service';
+import { Component } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
+import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
+import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'myFlix-Angular-client';
 
-  constructor(private fetchApiData: FetchApiDataService) { }
+  constructor(private dialog: MatDialog) {}
 
-  ngOnInit(): void {
-    this.getMovies();
+  openUserRegistrationDialog(): void {
+    this.dialog.open(UserRegistrationFormComponent, {
+      width: '280px'
+    });
   }
 
-  getMovies(): void {
-    this.fetchApiData.getAllMovies().subscribe((movies) => {
-      console.log(movies);
+  openUserLoginDialog(): void {
+    this.dialog.open(UserLoginFormComponent, {
+      width: '280px'
     });
   }
 }
