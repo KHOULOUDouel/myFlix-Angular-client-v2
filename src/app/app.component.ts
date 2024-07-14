@@ -11,7 +11,7 @@ import { UserLoginFormComponent } from './user-login-form/user-login-form.compon
 export class AppComponent {
   title = 'myFlix-Angular-client';
 
-  constructor(private dialog: MatDialog) {}
+  constructor(public dialog: MatDialog) {}
 
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {

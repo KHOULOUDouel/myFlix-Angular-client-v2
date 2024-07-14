@@ -19,7 +19,7 @@ export class UserLoginFormComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  loginUser(): void {
+  loginUser(): void {  // Ensure this name matches with the template
     this.fetchApiData.userLogin(this.userData).subscribe(
       (result) => {
         this.dialogRef.close();

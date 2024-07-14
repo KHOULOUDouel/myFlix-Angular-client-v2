@@ -16,7 +16,6 @@ import { AppComponent } from './app.component';
 import { UserRegistrationFormComponent } from './user-registration-form/user-registration-form.component';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 
-// Define your routes here
 const appRoutes: Routes = [
   { path: 'register', component: UserRegistrationFormComponent },
   { path: 'login', component: UserLoginFormComponent },
