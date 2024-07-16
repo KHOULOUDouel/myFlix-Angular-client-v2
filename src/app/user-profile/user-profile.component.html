@@ -1,0 +1,19 @@
+<form (ngSubmit)="updateUserProfile()" #userForm="ngForm">
+  <div>
+    <label for="username">Username</label>
+    <input id="username" name="username" [(ngModel)]="userData.Username" required>
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input id="password" name="password" [(ngModel)]="userData.Password" type="password" required>
+  </div>
+  <div>
+    <label for="email">Email</label>
+    <input id="email" name="email" [(ngModel)]="userData.Email" required>
+  </div>
+  <div>
+    <label for="birthday">Birthday</label>
+    <input id="birthday" name="birthday" [(ngModel)]="userData.Birthday" type="date" required>
+  </div>
+  <button type="submit">Update Profile</button>
+</form>

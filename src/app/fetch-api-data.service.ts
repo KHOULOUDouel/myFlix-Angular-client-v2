@@ -119,10 +119,10 @@ export class FetchApiDataService {
     );
   }
 
-  // Edit User
   public editUser(userDetails: any): Observable<any> {
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('user');
+    console.log('Edit User Request:', { user, userDetails }); // Log user and details being sent
     return this.http.put(`${apiUrl}users/${user}`, userDetails, {
       headers: new HttpHeaders({
         Authorization: `Bearer ${token}`,
@@ -132,7 +132,7 @@ export class FetchApiDataService {
       catchError(this.handleError)
     );
   }
-
+  
   // Delete User
   public deleteUser(): Observable<any> {
     const token = localStorage.getItem('token');

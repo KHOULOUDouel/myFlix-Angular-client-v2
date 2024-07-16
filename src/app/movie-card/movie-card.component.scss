@@ -1,0 +1,12 @@
+.movie-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .movie-card {
+    width: 300px;
+    margin: 10px;
+  }
+  
