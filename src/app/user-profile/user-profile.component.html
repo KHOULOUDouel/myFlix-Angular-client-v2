@@ -1,7 +1,7 @@
 <form (ngSubmit)="updateUserProfile()" #userForm="ngForm">
   <div>
     <label for="username">Username</label>
-    <input id="username" name="username" [(ngModel)]="userData.Username" required>
+    <input id="username" name="username" [(ngModel)]="userData.Username" disabled>
   </div>
   <div>
     <label for="password">Password</label>
