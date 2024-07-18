@@ -1,0 +1,30 @@
+/* General Styles */
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: #333;
+    padding: 10px;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+  
+    &.active {
+      background-color: #007bff;
+    }
+  
+    &:hover {
+      background-color: #555;
+    }
+  }
+  
+  router-outlet {
+    display: block;
+    margin: 20px;
+  }
+  
